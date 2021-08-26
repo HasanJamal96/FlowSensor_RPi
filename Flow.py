@@ -15,9 +15,12 @@ def countPulse(channel):
         count = count+1
  
 GPIO.add_event_detect(FLOW_SENSOR_GPIO, GPIO.FALLING, callback=countPulse)
- 
+
+print("Values will print after every 10 sec")
+
 while True:
     try:
+        print("Measuring")
         start_counter = 1
         time.sleep(10)
         start_counter = 0
